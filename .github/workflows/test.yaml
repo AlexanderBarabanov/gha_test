@@ -1,0 +1,10 @@
+name: CI
+on:
+  workflow_dispatch: # run on request (no need for PR)
+
+jobs:
+ build:
+   runs-on: ubuntu-latest
+   steps:
+     - name: test
+       run: echo "Hello, World!"
