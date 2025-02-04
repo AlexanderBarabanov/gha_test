@@ -8,8 +8,8 @@ on:
         required: true
 
 jobs:
- build:
+ test:
    runs-on: ubuntu-latest
    steps:
      - name: test
-       run: echo "${{ inputs.input-string }}"
+       run: "echo ${{ inputs.input-string }}"
