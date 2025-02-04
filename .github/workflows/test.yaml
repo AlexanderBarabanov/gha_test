@@ -13,7 +13,14 @@ jobs:
    steps:
      - name: Checkout code
        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+     
      - name: Test ls
        run: ls $GITHUB_WORKSPACE   
+     
      - name: Test input
        run: title="${{ inputs.input-string }}"
+     
+     - name: Test input via env
+       env:
+         TITLE: ${{ github.event.pull_request.title }}
+       run: title="$TITLE"
