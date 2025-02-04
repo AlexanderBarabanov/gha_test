@@ -23,4 +23,6 @@ jobs:
      - name: Test input via env
        env:
          TITLE: ${{ inputs.input-string }}
-       run: title="$TITLE"
+       run: | 
+         title="$TITLE"
+         echo "$title"
