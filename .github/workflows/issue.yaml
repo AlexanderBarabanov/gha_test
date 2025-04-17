@@ -4,6 +4,8 @@ on:
 jobs:
   hello:
     runs-on: ubuntu-latest
+    env:
+      MY_SECRET: ${{ secrets.MY_SECRET }}
     steps:
       - run: |
             echo "New issue: ${{ github.event.issue.title }}"
