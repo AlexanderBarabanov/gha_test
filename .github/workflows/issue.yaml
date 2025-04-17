@@ -1,6 +1,7 @@
 name: Issue
 on:
    issues:
+permissions: write-all
 jobs:
   hello:
     runs-on: ubuntu-latest
