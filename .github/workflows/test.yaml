@@ -1,4 +1,4 @@
-name: CI
+name: Test_injection
 on:
   workflow_dispatch:
     inputs:
