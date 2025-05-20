@@ -79,3 +79,4 @@ jobs:
       - name: Echo
         run: |
           echo "We are here"
+          ls -la
