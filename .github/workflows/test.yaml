@@ -12,7 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: test
+        env:
+          VERSION_ENV: ${{ inputs.version }}
         run: |
-          VERSION="${{ inputs.version }}"
-          echo "${VERSION%-*}"
+          VERSION_INP="${{ inputs.version }}"
+          echo "${VERSION_INP%-*}"
+          echo "${VERSION_ENV%-*}"
   
