@@ -1,0 +1,18 @@
+name: Production Release Process
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        required: true
+        type: string
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test
+        run: |
+          VERSION="${{ inputs.version }}"
+          echo "${VERSION%-*}"
+  
